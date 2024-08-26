@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <title>Tie</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="title">
+          <h2>ROCK</h2>
+          <h2>PAPER</h2>
+          <h2>SCISSORS</h2>
+        </div>
+
+        <div class="scores">
+          <div class="score" id="comp-score">
+            <p>COMPUTER <br />SCORE</p>
+            <h1 class="com-score"></h1>
+          </div>
+          <div class="score" id="you-score">
+            <p>YOUR <br />SCORE</p>
+            <h1 class="ur-score"></h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="won-heading">
+        <div class="h1">TIE UP</div>
+        <a href="../index.html"><button class="play-again">REPLAY</button></a>
+      </div>
+
+      <div class="left-img circle">
+        <img class="user-icon-tie" src="../images/rock.png" alt="rock-img" />
+      </div>
+      <div class="right-img circle">
+        <img
+          class="computer-icon-tie"
+          src="../images/rock.png"
+          alt="rock-img"
+        />
+      </div>
+
+      <button class="rule-btn rules">RULES</button>
+
+      <div class="game-rule" style="visibility: hidden">
+        <h1>Game Rules</h1>
+        <div class="rules-l">
+          <div class="rule-list">
+            <div class="sqre"></div>
+            <div class="rule">
+              Rock beats scissors, scissors beat paper, and paper beats rock.
+            </div>
+          </div>
+          <div class="rule-list">
+            <div class="sqre"></div>
+            <div class="rule">
+              Agree ahead of time whether you’ll count off “rock, paper,
+              scissors, shoot” or just “rock, paper, scissors.”
+            </div>
+          </div>
+          <div class="rule-list">
+            <div class="sqre"></div>
+            <div class="rule">
+              Use rock, paper, scissors to settle minor decisions or simply play
+              to pass the time
+            </div>
+          </div>
+          <div class="rule-list">
+            <div class="sqre"></div>
+            <div class="rule">
+              If both players lay down the same hand, each player lays down
+              another hand
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="cross-btn" style="visibility: hidden">X</button>
+    </div>
+
+    <script src="../index.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const userIconTie = document.querySelector(".user-icon-tie");
+        const computerIconTie = document.querySelector(".computer-icon-tie");
+        const userChoice = localStorage.getItem("userChoice");
+        const computerChoice = localStorage.getItem("computerChoice");
+
+        userIconTie.src = `../images/${userChoice}.png`;
+        computerIconTie.src = `../images/${computerChoice}.png`;
+
+        const leftImg = document.querySelector(".left-img");
+        const rightImg = document.querySelector(".right-img");
+
+        leftImg.classList.add(`${userChoice}1`);
+        rightImg.classList.add(`${computerChoice}1`);
+
+        // Clear the choices from localStorage
+        localStorage.removeItem("userChoice");
+        localStorage.removeItem("computerChoice");
+      });
+    </script>
+  </body>
+</html>

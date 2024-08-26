@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPS Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <div>
+    <div class="main">
+    <div class="header">
+      <div class="title">
+        <h2>ROCK</h2>
+        <h2>PAPER</h2>
+        <h2>SCISSORS</h2>
+      </div>
+
+      <div class="scores">
+        <div class="score" id="comp-score">
+          <p>COMPUTER <br />SCORE</p>
+          <h1 class="com-score"></h1>
+        </div>
+        <div class="score" id="you-score">
+          <p>YOUR <br />SCORE</p>
+          <h1 class="ur-score"></h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="signs">
+      <button class="stone hand" id="rock">
+        <img src="./images/rock.png" alt="rock-img" />
+      </button>
+      <button class="paper hand" id="paper">
+        <img src="./images/paper.png" alt="paper" />
+      </button>
+
+      <button class="scissor hand" id="scissor">
+        <img src="./images/scissor.png" alt=" scissor image" />
+      </button>
+
+      <div class="line1 resh"></div>
+      <div class="line2 resh"></div>
+      <div class="line3 resh"></div>
+    </div>
+
+    <button class="rule-btn rules">RULES</button>
+
+    <div class="game-rule">
+      <h1>Game Rules</h1>
+      <div class="rules-l">
+        <div class="rule-list">
+          <div class="sqre"></div>
+          <div class="rule">
+            Rock beats scissors, scissors beat paper, and paper beats rock.
+          </div>
+        </div>
+        <div class="rule-list">
+          <div class="sqre"></div>
+          <div class="rule">
+            Agree ahead of time whether you’ll count off “rock, paper, scissors,
+            shoot” or just “rock, paper, scissors.”
+          </div>
+        </div>
+        <div class="rule-list">
+          <div class="sqre"></div>
+          <div class="rule">
+            Use rock, paper, scissors to settle minor decisions or simply play
+            to pass the time
+          </div>
+        </div>
+        <div class="rule-list">
+          <div class="sqre"></div>
+          <div class="rule">
+            If both players lay down the same hand, each player lays down
+            another hand
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <button class="cross-btn">X</button>
+</div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

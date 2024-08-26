@@ -1,0 +1,241 @@
+.won-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vw;
+}
+
+.h1 {
+  color: white;
+  font-size: 3vw;
+  font-weight: 700;
+}
+
+.h2 {
+  color: white;
+  font-size: 1.7vw;
+  font-weight: 700;
+}
+
+.play-again {
+  background-color: white;
+  line-height: 2.5;
+  padding: 0 2vw;
+  margin-top: 1vw;
+  border-width: 0;
+  border-radius: 0.4vw;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+}
+
+.left-img {
+  position: absolute;
+  top: 50%;
+  left: 28%;
+  z-index: 10;
+}
+
+.right-img {
+  position: absolute;
+  top: 50%;
+  right: 28%;
+  z-index: 10;
+}
+
+.circle {
+  height: 130px;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+  /* border: 0.7vw solid #0074B6; */
+}
+
+.ellipse3-left {
+  position: absolute;
+  top: 37%;
+  left: 22.4%;
+}
+
+.ellipse4-left {
+  position: absolute;
+  top: 24.9%;
+  left: 16.7%;
+}
+
+.ellipse5-left {
+  position: absolute;
+  width: 15%;
+  top: 42.5%;
+  left: 24.7%;
+  z-index: 5;
+  opacity: 50%;
+}
+
+.ellipse3-right {
+  position: absolute;
+  top: 37%;
+  right: 22.4%;
+}
+
+.ellipse4-right {
+  position: absolute;
+  top: 24.9%;
+  right: 16.7%;
+}
+
+.ellipse5-right {
+  position: absolute;
+  width: 15%;
+  top: 42.5%;
+  right: 24.7%;
+  z-index: 5;
+  opacity: 50%;
+}
+
+.rock1 {
+  border: 0.6vw solid #0074b6;
+}
+
+.paper1 {
+  border: 0.6vw solid #ffa943;
+}
+
+.scissor1 {
+  border: 0.6vw solid #bd00ff;
+}
+
+.rule-btn-won {
+  right: 10%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.next-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8%;
+}
+
+.next-h1 {
+  font-size: 4.2vw;
+  line-height: 1.8;
+  letter-spacing: 0.5vw;
+  color: white;
+}
+
+.next-h2 {
+  font-size: 2.3vw;
+  color: white;
+}
+
+.trophy {
+  width: 14vw;
+}
+
+.next-main a {
+  margin-top: 2%;
+}
+
+/* Star Rocket Animation */
+@keyframes rocket {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(30px, -100px) rotate(45deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50px, -200px) rotate(90deg);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translate(70px, -300px) rotate(135deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-30px, -400px) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+.star {
+  position: absolute;
+  animation: rocket 2s ease-in-out infinite;
+}
+
+/* Individual star timings to stagger the animations */
+.star1 {
+  width: 10vw;
+  top: 40%;
+  left: 32%;
+  animation-delay: 0s;
+}
+
+.star2 {
+  width: 10vw;
+  right: 32%;
+  top: 40%;
+  animation-delay: 0.2s;
+}
+
+.star3 {
+  width: 10vw;
+  top: 4%;
+  left: 45%;
+  animation-delay: 0.4s;
+}
+
+.star4 {
+  width: 7vw;
+  top: 15%;
+  left: 36%;
+  animation-delay: 0.6s;
+}
+
+.star5 {
+  width: 7vw;
+  right: 36%;
+  top: 15%;
+  animation-delay: 0.8s;
+}
+
+.star6 {
+  width: 4vw;
+  top: 34%;
+  left: 38%;
+  animation-delay: 1s;
+}
+
+.star7 {
+  width: 4vw;
+  top: 34%;
+  right: 38%;
+  animation-delay: 1.2s;
+}
+
+@media (max-width: 1500px) {
+  .elp {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 800px) {
+  .left-img {
+    top: 40%;
+    left: 42%;
+  }
+
+  .right-img {
+    top: 60%;
+    left: 42%;
+  }
+}
